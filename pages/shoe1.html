@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNORLAX</title>
+    <link rel="stylesheet" href="../css/navfooter.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .dropdown {
+            margin-right: 20px;
+        }
+        /* Custom dropdown style */
+        .dropdown select {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .dropdown select:hover,
+        .dropdown select:focus {
+            border-color: #666;
+        }
+        /* Custom dropdown arrow */
+        .dropdown select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!--donot edit navbar.it was hard too make lol-->
+    <div class="navbar">
+        <div>
+            <a href="../index.html"><img class="logo" src="../images/logo.png" alt=""></a>
+            <a href="signin.html"><img class="home" src="../images/signin.png" alt=""></a>
+            <a href="contact.html"><img class="contact" src="../images/contact.png" alt=""></a>
+            <a href="../index.html"><img class="home" src="../images/homeicon.png" alt=""></a> 
+        </div>
+        
+    </div>
+
+
+    <div class="product">
+        <div class="product_image" align="center">
+           <img src="../images/shoes/shoe1.jpg" alt="click to view more" >
+        </div>
+        <div class="product_details">
+            <p class="name">NIKE Sneaker</p>
+            <p class="price">£35</p>
+        </div>
+        <hr class="hr">
+        <div class="overflow">
+            <p class="details">
+                Introducing our latest collection of premium shoes, crafted with the perfect blend of style, comfort, and durability. Elevate your footwear game with our meticulously designed shoes that offer unparalleled comfort for all-day wear. Made from high-quality materials, our shoes are built to last, ensuring long-lasting performance and timeless style. Whether you're strolling through the city streets or hitting the gym, our shoes provide the perfect combination of support and flexibility. With sleek designs and versatile color options, our shoes are the perfect addition to any wardrobe, adding a touch of sophistication to every step you take.           </div>
+    </div>
+    
+    <div class="container">
+        <div class="dropdown">
+            <label for="sizes">Size:</label>
+            <select id="sizes">
+                <option value="S">8</option>
+                <option value="M">9</option>
+                <option value="L">10</option>
+                <option value="XL">11</option>
+                <option value="XXL">12</option>
+            </select>
+        </div>
+        <form action="confirmorder.html">
+            <button class="button-73" role="button">BUY</button>
+        </form>
+    </div>
+    
+    <hr class="space">
+    <hr class="space">
+
+
+
+    <div class="footer">
+        <div class="social" align="center">
+            <img class="social_logo" src="../images/fb.png" alt="">
+            <img class="social_logo" src="../images/insta.png" alt="">
+            <img class="social_logo" src="../images/twitter.png" alt="">
+        </div> 
+    </div>  
+
+    <script>
+        alert("Due to high demand, we can only allow one item per order")
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+    img{
+        width: 200px;
+        height: auto;
+    }
+
+    .hr{
+        height: 5px;
+        background-color: black;
+    }
+
+    .product{
+        display: block;
+        margin-top: 5vh;
+    }
+    .product_image{
+        float:none;
+        margin-left: 10px;
+        }
+
+    .product_details{
+            margin-left: 10px;
+            float: none;
+            display: flex;
+            justify-content: space-between;
+        }
+    .name{
+            font-family: 'Lilita One', sans-serif;
+            font-size: 3vh;
+
+        }
+    .details{
+            font-family: 'Kdam Thmor Pro', sans-serif;
+            font-size: 1vh;
+            display: none;
+        }
+
+    .price{
+            font-family: 'Monofett', monospace;
+            font-size: 3vh;
+            margin-right: 20px;
+        }
+@media screen and (min-width: 720px){
+    .product{
+        margin-left: 20px;
+        margin-top: 5vh;
+    }
+    
+    .product_image{
+        float: left;
+    }
+    .product_details{
+        display: block;
+        margin-left: 230px;
+    }
+    .name{
+        float: none;
+        font-size: 5vh;
+    }
+    
+    .details{
+        padding: center;
+        float: none;
+        display: inline;
+        font-size: 13px;
+        
+    }
+    
+    .overflow{
+        height: 80px;
+        overflow: visible;
+    }
+
+    .price{
+        float: none;
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,93 @@
+img{
+    width: 60%;
+    height: auto;
+}
+.hr{
+    height: 5px;
+    background-color: black;
+}
+
+.product{
+    display: block;
+    margin-top: 5vh;
+}
+.product_image{
+    float:none;
+    margin-left: 10px;
+    }
+
+.product_details{
+        margin-left: 10px;
+        float: none;
+        display: flex;
+        justify-content: space-between;
+    }
+.name{
+        font-family: 'Lilita One', sans-serif;
+        font-size: 3vh;
+
+    }
+.details{
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-size: 2vh;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+.price{
+        font-family: 'Monofett', monospace;
+        font-size: 3vh;
+        margin-right: 20px;
+    }
+
+
+
+
+
+/* CSS */
+.button-73 {
+  appearance: none;
+  background-color: #148d32;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #148d32 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-73:hover {
+  background-color: #16c04f;
+  box-shadow: #16c04f 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-73:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+  img{
+    width: 500px;
+    height: auto;
+  }
+}

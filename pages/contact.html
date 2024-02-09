@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNORLAX</title>
+    <link rel="stylesheet" href="../css/navfooter.css">
+    <link rel="stylesheet" href="../css/contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--donot edit navbar.it was hard too make lol-->
+    <div class="navbar">
+        <div>
+            <a href="../index.html"><img class="logo" src="../images/logo.png" alt=""></a>
+            <a href="signin.html"><img class="home" src="../images/signin.png" alt=""></a>
+            <a href="contact.html"><img class="contact" src="../images/contact.png" alt=""></a>
+            <a href="../index.html"><img class="home" src="../images/homeicon.png" alt=""></a> 
+        </div>
+    </div>
+
+    <header>Contact Us</header>
+
+    <form id="form" class="topBefore">
+        <input id="name" type="text" placeholder="NAME">
+        <input id="email" type="text" placeholder="E-MAIL">
+        <textarea id="message" placeholder="MESSAGE"></textarea>
+        <input id="submit" type="button" value="GO!" onclick="submitForm()">
+    </form>
+
+    <div class="footer">
+        <div class="social" align="center">
+            <img class="social_logo" src="../images/fb.png" alt="">
+            <img class="social_logo" src="../images/insta.png" alt="">
+            <img class="social_logo" src="../images/twitter.png" alt="">
+        </div> 
+    </div>  
+
+    <script>
+        function validateEmail(email) {
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        function submitForm() {
+            // Get form input values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validate name
+            if (name === '') {
+                alert('Please enter your name.');
+                return;
+            }
+
+            // Validate email
+            if (email === '') {
+                alert('Please enter your email.');
+                return;
+            } else if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Validate message length
+            if (message.length < 20) {
+                alert('Please enter a message with at least 40 characters.');
+                return;
+            }
+
+            // If all validations pass, proceed with form submission
+            // For now, just display a "Thank you" message and refresh the page
+            alert('Thank you for your message! We will contact you soon.');
+            location.reload();
+        }
+    </script>
+</body>
+</html>

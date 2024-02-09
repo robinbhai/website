@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNORLAX</title>
+    <link rel="stylesheet" href="../css/navfooter.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .dropdown {
+            margin-right: 20px;
+        }
+        /* Custom dropdown style */
+        .dropdown select {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .dropdown select:hover,
+        .dropdown select:focus {
+            border-color: #666;
+        }
+        /* Custom dropdown arrow */
+        .dropdown select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!--donot edit navbar.it was hard too make lol-->
+    <div class="navbar">
+        <div>
+            <a href="../index.html"><img class="logo" src="../images/logo.png" alt=""></a>
+            <a href="signin.html"><img class="home" src="../images/signin.png" alt=""></a>
+            <a href="contact.html"><img class="contact" src="../images/contact.png" alt=""></a>
+            <a href="../index.html"><img class="home" src="../images/homeicon.png" alt=""></a> 
+        </div>
+        
+    </div>
+
+
+    <div class="product">
+        <div class="product_image" align="center">
+           <img src="../images/pants/pant1.jpg" alt="click to view more" >
+        </div>
+        <div class="product_details">
+            <p class="name">Acne Denim</p>
+            <p class="price">£30</p>
+        </div>
+        <hr class="hr">
+        <div class="overflow">
+            <p class="details">
+                Introducing our latest line of premium pants, meticulously crafted to redefine comfort and style. Elevate your everyday attire with our versatile pants that seamlessly blend fashion and functionality. Made from high-quality fabrics, our pants offer exceptional comfort and durability, ensuring they withstand the rigors of daily wear. From tailored fits to relaxed styles, our collection caters to every preference and occasion. Whether you're dressing up for a formal event or keeping it casual for a weekend outing, our pants provide the perfect balance of comfort and sophistication. Discover timeless designs and impeccable craftsmanship with our exclusive range of pants.</p>
+        </div>
+    
+    <div class="container">
+        <div class="dropdown">
+            <label for="sizes">Size:</label>
+            <select id="sizes">
+                <option value="S">30</option>
+                <option value="M">32</option>
+                <option value="L">34</option>
+                <option value="XL">36</option>
+                <option value="XXL">38</option>
+                <option value="XXL">40</option>
+            </select>
+        </div>
+        <form action="confirmorder.html">
+            <button class="button-73" role="button">BUY</button>
+        </form>
+    </div>
+    
+    <hr class="space">
+    <hr class="space">
+
+
+
+    <div class="footer">
+        <div class="social" align="center">
+            <img class="social_logo" src="../images/fb.png" alt="">
+            <img class="social_logo" src="../images/insta.png" alt="">
+            <img class="social_logo" src="../images/twitter.png" alt="">
+        </div> 
+    </div>  
+
+    <script>
+        alert("Due to high demand, we can only allow one item per order")
+    </script>
+</body>
+</html>

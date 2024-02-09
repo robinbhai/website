@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/thankyou.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="tab"></div>
+        <div class="paid"><p>Receipt Paid successfully</p></div>
+        <div class="receipt">
+            <div class="paper">
+                <div class="title">Receipt</div>
+                <div class="date" id="currentDate">Date: </div>
+                <table>
+                    <h2 style="margin-top: 100px;" align="center">Thank you for your order</h2>
+                </table>
+                <div class="sign center">
+                    <div class="barcode" id="barcode"></div>
+                    <br/>
+                    <span id="barcodeNumber"></span>
+                    <br/>
+                    <div class="thankyou">Contact us for any inconvenience</div>
+                    <a href="../index.html"><img src="../images/homeicon.png" style="width:30px; height:auto; margin-top: 10px;" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update current date
+        function updateDate() {
+            const currentDateElement = document.getElementById('currentDate');
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleDateString('en-US');
+            currentDateElement.textContent = "Date: " + formattedDate;
+        }
+
+        // Generate random barcode number
+        function generateBarcode() {
+            const barcodeElement = document.getElementById('barcodeNumber');
+            const barcode = Math.floor(1000000000 + Math.random() * 9000000000); // Generate 10-digit random number
+            barcodeElement.textContent = barcode;
+        }
+
+        // Call functions on page load
+        window.onload = function() {
+            updateDate();
+            generateBarcode();
+        };
+    </script>
+</body>
+</html>

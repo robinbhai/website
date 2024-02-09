@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/confirmorder.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="thankyou.html" id="myform" onsubmit="return validateForm()">
+            <header>Shipping Order Form</header>
+            <div class="area">
+                <div class="row">
+                    <div class="col2">
+                        <input type="text" name="firstname" required>
+                        <label for="fistname">First Name</label>
+                    </div>
+                    <div class="col2">
+                        <input type="text" name="lastname" required>
+                        <label for="lastname">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="row">
+                    <input type="text" name="phone" id="phone" required>
+                    <label for="phone">Phone</label>
+                </div>
+                <div class="row">
+                    <input type="text" name="address" id="address" required>
+                    <label for="address">Address</label>
+                </div>
+            </div>
+            <div class="area">
+                <div class="ckeckarea">
+                    <input type="checkbox" name="checkbox1" id="checkbox1" onclick="autofilling(this.form)">
+                    <header>Fill up Payment details</header>
+                </div>
+                <div class="row">
+                    <input type="text" name="newaddress" id="newaddress" required pattern="\d{16}">
+                    <label for="newaddress">Card Number (16 digits)</label>
+                </div>
+                <div class="row">
+                    <div class="col2">
+                        <input type="datetime" name="newfirstname" required>
+                        <label for="newfistname">EXP Date (MM/YYYY)</label>
+                    </div>
+                    <div class="col2">
+                        <input type="text" name="newlastname" id="newlastname" required pattern="\d{3}">
+                        <label for="newlastname">CVC (3 digits)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button class="button-17" role="button">PAY NOW</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function autofilling(f) {
+            if ($("#checkbox1").prop("checked")) {
+                f.newfirstname.value = f.firstname.value;
+                f.newlastname.value = f.lastname.value;
+                f.newaddress.value = f.address.value;
+            } else {
+                f.newfirstname.value = '';
+                f.newlastname.value = '';
+                f.newaddress.value = '';
+            }
+        }
+
+        function validateForm() {
+            var form = document.getElementById("myform");
+            var isValid = form.checkValidity();
+
+            if (!isValid) {
+                // If form is not valid, prevent form submission
+                return false;
+            }
+
+            // Validate email format
+            var email = document.getElementById("email").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate card number (16 digits)
+            var cardNumber = document.getElementById("newaddress").value;
+            var cardNumberRegex = /^\d{16}$/;
+            if (!cardNumberRegex.test(cardNumber)) {
+                alert("Please enter a valid 16-digit card number.");
+                return false;
+            }
+
+            // Validate phone number
+            var phoneNumber = document.getElementById("phone").value;
+            var phoneNumberRegex = /^\d{10}$/; // Adjust as per your phone number format
+            if (!phoneNumberRegex.test(phoneNumber)) {
+                alert("Please enter a valid phone number.");
+                return false;
+            }
+
+            // Validate CVC (3 digits)
+            var cvc = document.getElementById("newlastname").value;
+            var cvcRegex = /^\d{3}$/;
+            if (!cvcRegex.test(cvc)) {
+                alert("Please enter a valid 3-digit CVC.");
+                return false;
+            }
+
+            // Additional custom validation logic can be added here
+
+            return true; // Form submission allowed
+        }
+    </script>
+</body>
+</html>
